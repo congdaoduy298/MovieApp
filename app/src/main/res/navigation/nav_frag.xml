@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_frag.xml"
+    app:startDestination="@id/recycleViewFragment">
+    <fragment
+        android:id="@+id/recycleViewFragment"
+        android:name="com.example.movieapp.RecycleViewFragment"
+        android:label="RecycleViewFragment" >
+        <action
+            android:id="@+id/action_recycleViewFragment_to_gridViewFragment"
+            app:destination="@id/gridViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gridViewFragment"
+        android:name="com.example.movieapp.GridViewFragment"
+        android:label="GridViewFragment" >
+        <action
+            android:id="@+id/action_gridViewFragment_to_recycleViewFragment"
+            app:destination="@id/recycleViewFragment" />
+    </fragment>
+</navigation>
